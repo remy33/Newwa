@@ -11,5 +11,10 @@ Note:
 
 - Make the K-bucket bigger to index dht faster.
 
+Motivation:
+To create an open platform for people to share freely thier podcasts over the world.
+
+They said it's not possible...
+
 ToDos :
 - Anounce get ask the peer itself for the torrent file ( Possible? )
