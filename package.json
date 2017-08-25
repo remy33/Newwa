@@ -1,0 +1,15 @@
+{
+  "name": "newwa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["podcast", "torrents", "dht", "p2p"],
+  "author": "Remy",
+  "license": "GNU AGPLv3",
+  "devDependencies": {
+    "@types/node": "^7.0.4"
+  }
+}
