@@ -11,7 +11,10 @@
             "program": "${workspaceRoot}\\js\\index.js",
             "cwd": "${workspaceRoot}",
             "outFiles": [],
-            "sourceMaps": true
+            "sourceMaps": true,
+            "env": {
+                "DEBUG": "*,-not_this"
+            }
         },
         {
             "type": "node",

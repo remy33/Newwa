@@ -17,4 +17,4 @@ To create an open platform for people to share freely thier podcasts over the wo
 They said it's not possible...
 
 ToDos :
-- Anounce get ask the peer itself for the torrent file ( Possible? )
+- Anounce get, ask the peer itself for the torrent file ( )
