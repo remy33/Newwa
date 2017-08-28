@@ -136,3 +136,5 @@ dht.on('ready', () => {
     
   }
 }
+
+exports = Spider;

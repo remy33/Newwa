@@ -1,5 +1,11 @@
+var debug = require('debug')('index');
 import Spider from './DhtSpider/spider';
+import global from './global';
 
-let x  = new Spider();
-console.log("It works!");
+var spidy  = new Spider();
+ 
+ var glb = new global();
+
+debug(`Booting : ${glb.getAppName()}, version ${glb.getAppVersion()} `);
+
 
