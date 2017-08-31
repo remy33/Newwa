@@ -21,6 +21,7 @@
   "author": "Remy",
   "license": "GNU AGPLv3",
   "devDependencies": {
+    "@types/bluebird": "^3.5.8",
     "@types/node": "^7.0.4"
   }
 }
