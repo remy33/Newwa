@@ -20,7 +20,7 @@ class UserDb extends Core {
     DhtRecords = new Model<DhtRecordDocument, DhtRecord>(this, DhtRecord);
 }
 
-let db = new UserDb({ database: 'newwa' })
+let db = new UserDb({ database: 'newwa' });
 
 db.connect()
     .then(() => {
@@ -36,4 +36,5 @@ db.connect()
     })
     .then(() => db.DhtRecords.get())
     .then(record => console.log(record))
-    .catch(err => console.error(err.message))
+    .then(() => db.close())
+    .catch(err => console.error(err.message));
