@@ -10,7 +10,7 @@ interface DhtRecordDocument {
 
 @Index({ count: 1 })
 @Collection('dhtRecords')
-class DhtRecord extends Instance<DhtRecordDocument, DhtRecord> implements DhtRecordDocument {
+export class DhtRecord extends Instance<DhtRecordDocument, DhtRecord> implements DhtRecordDocument {
     @ObjectID _id: string;
     @Property(String) hash: string;
     @Property(Number) count: number;
@@ -31,29 +31,32 @@ export const connect = (): Bluebird<UserDb | Error> => {
         .catch(err => new Error('Couldn\'t connect to mongodb'));
 };
 
-export const save = (hash: string, count: number, files: string[]): Bluebird<Object> => {
+export const save = (hash: string, count: number, files: string[]): Bluebird<Object | Error> => {
     return db.DhtRecords
-        .insert({ hash, count, files })
+        .remove({ hash })
+        .then(() => db.DhtRecords.insert({ hash, count, files }))
         .then(() => { return { ok: true } })
-        .catch(() => { return { ok: false } });
+        .catch(() => new Error('Couldn\'t save values to mongodb'));
 };
 
-export const get = (hash: number): Bluebird<DhtRecord | Error> => {
+export const get = (hash: string): Bluebird<DhtRecord | Error> => {
     return db.DhtRecords
         .get({ hash })
         .then((record: DhtRecord) => record)
-        .catch(err => new Error('Couldn\'t find the specified hash'));
+        .catch(err => new Error('Couldn\'t get the specified hash'));
 };
 
-export const close = (): Bluebird<Object> => {
+export const close = (): Bluebird<Object | Error> => {
     return db.close()
         .then(() => { return { ok: true } })
-        .catch(err => { return { ok: false } });
+        .catch(err => new Error('Error while closing connection to mongodb'));
 };
 
 export default {
     connect,
     save,
     get,
-    close
+    close,
+    version: '1.0.0',
+    author: 'Yishai Zehavi'
 };
