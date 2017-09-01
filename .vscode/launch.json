@@ -8,12 +8,14 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}\\js\\index.js",
+            "program": "${workspaceRoot}\\js\\Index.js",
             "cwd": "${workspaceRoot}",
             "outFiles": [],
             "sourceMaps": true,
             "env": {
-                "DEBUG": "*,-not_this"
+                //"DEBUG": "*,-not_this"
+                "DEBUG": "newaa,-not_this"
+                
             }
         },
         {
