@@ -5,6 +5,7 @@
         "sourceMap": true,
         "watch": true,
         "outDir": "js",
+        "target": "es5",
         "allowJs": true
     }
 }
