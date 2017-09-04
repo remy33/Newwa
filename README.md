@@ -20,4 +20,4 @@ They said it's not possible...
 - Anounce get, ask the peer itself for the torrent file ( )
 
 ### P.S. :
-I was woundering if we should use strong typed events like [https://github.com/KeesCBakker/Strongly-Typed-Events-for-TypeScript](this) or should we stay vanilla for simpleness, I don't know the answer so we use vanilla.
+I was woundering if we should use strong typed events like [this](https://github.com/KeesCBakker/Strongly-Typed-Events-for-TypeScript) or should we stay vanilla for simpleness, I don't know the answer so we use vanilla.
