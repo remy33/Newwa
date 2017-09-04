@@ -13,7 +13,9 @@
             "outFiles": [],
             "sourceMaps": true,
             "env": {
-                "DEBUG": "*,-not_this"
+                //"DEBUG": "*,-not_this"
+                "DEBUG": "newaa,-not_this"
+                
             }
         },
         {

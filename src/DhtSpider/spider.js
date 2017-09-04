@@ -1,4 +1,4 @@
-export default class Spider {
+export class Spider {
   constructor() {
   
 
