@@ -2,10 +2,15 @@
     "compileOnSave": true,    
     "compilerOptions": {
         "module": "commonjs",
+        "target": "es6",
         "sourceMap": true,
         "watch": true,
         "outDir": "js",
-        "target": "es5",
-        "allowJs": true
-    }
+        "allowJs": true,
+        "experimentalDecorators": true
+    },
+    "exclude": [
+        "node_modules/",
+        "js/"
+    ]
 }

@@ -8,12 +8,20 @@
   },
   "dependencies": {
     "debug": "~3.0.1",
-      "webtorrent": "^0.98.19"
+    "iridium": "^7.2.5",
+    "nat-upnp": "^1.1.0",
+    "webtorrent": "^0.98.19"
   },
-  "keywords": ["podcast", "torrents", "dht", "p2p"],
+  "keywords": [
+    "podcast",
+    "torrents",
+    "dht",
+    "p2p"
+  ],
   "author": "Remy",
   "license": "GNU AGPLv3",
   "devDependencies": {
+    "@types/bluebird": "^3.5.8",
     "@types/node": "^7.0.4"
   }
 }
