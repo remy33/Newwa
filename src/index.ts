@@ -9,11 +9,10 @@ import {DhtEngine} from './DhtSpider/DhtEngine';
 
 debug(`Booting : ${global.AppName}, version ${global.AppVersion} `);
 
-
 var TorrentClient = new WebTorrent({
      // We don't want to use trackers becaouse it will be extremly rude to kill the with requests
     tracker: false,
-    dht: { maxTables: 4000, maxPeers: 4000, }, // More peers = more speed
+    dht: { concurrency: 10000,  maxTables: 10000, maxPeers: 10000, }, // More peers = more speed
     dhtPort: global.DHT_PORT,
     // While recent restarting the progrma we want the same indentity
     //nodeId:'ca73017abdd9b8d8454896278be7951186d6b545', 

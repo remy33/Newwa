@@ -8,15 +8,18 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceRoot}/js/index.js",
+            "program": "${workspaceRoot}/js/src/index.js",
             "cwd": "${workspaceRoot}",
-            "outFiles": [],
             "sourceMaps": true,
+            "console": "externalTerminal", // Enable to sopport debug colors
             "env": {
                 //"DEBUG": "*,-not_this"
                 "DEBUG": "newaa,-not_this"
                 
-            }
+            },
+            "runtimeArgs": [
+				"--nolazy"
+			]
         },
         {
             "type": "node",
